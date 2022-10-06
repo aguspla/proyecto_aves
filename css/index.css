@@ -1,0 +1,179 @@
+/*Import */
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;500;600&display=swap');
+
+/*Variables*/
+
+:root{
+    /*palette*/
+    --primary: #ACC18A;
+    --secondary: #DAFEB7;
+    --light: #F2FBE0;
+    --accent: #426B69;
+
+    /*Font Sizes*/
+
+    --text-xxl: 4.8em;
+    --text-xl: 3.6em;
+    --text-lg: 3.2em;
+    --text-md: 2.0em;
+    --text-sm: 1.6em;
+    --text-xs: 1.2em;
+
+    /*Spacings*/
+
+    --sp-xxl: 12rem;
+    --sp-xl: 8rem;
+    --sp-lg: 5rem;
+    --sp-md: 3.2rem;
+    --sp-sm: 1.6rem;
+    --sp-xs: 0.8rem;
+}
+
+
+/* Normalize*/
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Inconsolata', monospace;
+    font-size: var(--text-sm);
+    color: var(--primary);
+    /*display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;*/
+}
+
+li{
+    display: inline;
+}
+
+header{
+    background-color: var(--accent);
+    padding-top: var(--sp-sm);
+    padding-bottom: var(--sp-sm);
+
+}
+main{
+    background-color: var(--primary);
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+    
+}
+
+article {
+    font-size: var(--text-lg);
+    text-justify: auto;
+}
+
+img{
+    border: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+
+footer{
+    background-color: var(--light);
+    font-size: var(--text-xs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form{
+    background-color: var(--secondary);
+    color: var(--accent);
+
+}
+
+
+label{
+    font-size: var(--sp-xm);
+}
+
+/* Class */
+
+.intro{
+    color: var(--light);
+    background-color: var(--primary);
+
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.navegador{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.navegador__link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navegador__link a{
+    font-size: var(--text-md);
+    display: table-caption;
+    color: var(--light);
+    font-size: var(--text-sm);
+    margin: var(--sp-sm);
+    padding: 3px;
+}
+.aves{
+    color: var(--accent);
+}
+.aves__izq{
+    background-color: var(--light);
+
+}
+.aves__drc{
+    background-color: var(--secondary);
+}
+.yo{
+    color: var(--accent);
+    background-color: var(--secondary);
+}
+
+.contacto{
+    color: var(--accent);
+    background-color: var(--secondary) 2px;
+}
+
+.footer__imagen{
+    margin: var(--sp-xl);
+}
+
+.footer__cr{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    font-size: var(--text-xs);
+    margin: var(--sp-xl);
+
+}
+
+/* Id */
+
+
+
+/* Transitions */
+
+.navegador__link a:hover{
+    border-bottom: var(--light) 2px solid;
+}
+
+/* Animations */
