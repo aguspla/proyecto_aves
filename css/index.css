@@ -12,12 +12,12 @@
 
     /*Font Sizes*/
 
-    --text-xxl: 4.8em;
-    --text-xl: 3.6em;
-    --text-lg: 3.2em;
-    --text-md: 2.0em;
-    --text-sm: 1.6em;
-    --text-xs: 1.2em;
+    --text-xxl: 4.8rem;
+    --text-xl: 3.6rem;
+    --text-lg: 3.2rem;
+    --text-md: 2.0rem;
+    --text-sm: 1.6rem;
+    --text-xs: 1.2rem;
 
     /*Spacings*/
 
@@ -39,6 +39,19 @@
 }
 html{
     font-size: 62.5%;
+
+}
+
+h1{
+    font-size: var(--text-xxl);
+}
+
+h3{
+    font-size: var(--text-md);
+}
+
+label{
+    font-size: var(--text-sm);
 }
 
 body{
@@ -76,41 +89,46 @@ article {
 }
 
 img{
-    border: 0px;
-    padding: 0px;
-    margin: 0px;
+    width: 100%;
 }
 
-footer{
-    background-color: var(--light);
-    font-size: var(--text-xs);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+hr{
+    height: 4px;
+    width: 100%;
+    color: var(--primary);
+    background-color: var(--primary);
 }
 
-form{
-    background-color: var(--secondary);
-    color: var(--accent);
-
+/*Bootsrap desreboot*/
+ol, ul, dl{
+    margin-bottom: 0;
+    padding-left: 0;
 }
 
-
-label{
-    font-size: var(--sp-xm);
+body{
+    font-weight: normal;
+    line-height: normal;
 }
+
+a:hover{
+    color: inherit;
+}
+    
 
 /* Class */
 
 .intro{
     color: var(--light);
     background-color: var(--primary);
-
+    text-align: center;
+    padding-top: var(--sp-xxl);
+    padding-bottom: var(--sp-xxl);
 }
 
 .container{
     max-width: 1200px;
     margin: 0 auto;
+
 }
 
 .navegador{
@@ -121,10 +139,13 @@ label{
 
 .navegador__link{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
 }
-
+.navegador__logo{
+    width: 208px;
+}
 .navegador__link a{
     font-size: var(--text-md);
     display: table-caption;
@@ -132,6 +153,14 @@ label{
     font-size: var(--text-sm);
     margin: var(--sp-sm);
     padding: 3px;
+    transition: color 1.2s ease-in-out;
+}
+.bannerm{
+    display: none;
+}
+.banner{
+    display: grid;
+    place-items: center;
 }
 .aves{
     color: var(--accent);
@@ -143,21 +172,46 @@ label{
 .aves__drc{
     background-color: var(--secondary);
 }
+
+.aves__img{
+    max-width: 360px;
+}
+
 .yo{
     color: var(--accent);
     background-color: var(--secondary);
 }
 
-.contacto{
-    color: var(--accent);
-    background-color: var(--secondary) 2px;
+.yo__foto {
+    max-width: 293px;
 }
 
-.footer__imagen{
+
+.background__light{
+    background-color: var(--light);
+}
+
+.background__primary{
+    background-color: var(--primary);
+}
+
+.background__secondary{
+    background-color: var(--secondary);
+}
+
+.cierre{
+    font-size: var(--text-xs);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cierre__imagen{
     margin: var(--sp-xl);
+    max-width: 157px;
 }
 
-.footer__cr{
+.cierre__cr{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -166,6 +220,7 @@ label{
 
 }
 
+
 /* Id */
 
 
@@ -173,7 +228,33 @@ label{
 /* Transitions */
 
 .navegador__link a:hover{
-    border-bottom: var(--light) 2px solid;
+    color: var(--primary);
 }
 
 /* Animations */
+
+
+/* Media Queries */
+
+@media screen and (max-width:826px) {
+   /* html{
+        font-size: 62.5;
+    }  esto es para cambiar en un futuro el size de las fuentes cuando pasa a mobile para los intros y el texto de nosotros.html hay que hacer matematicas y ahora no tengo ganas */
+    hr{
+        display: none;
+    }
+    .navegador{
+        flex-direction: column;
+        align-items: center;
+    }
+    .navegador__link{
+        justify-content: center;
+    }
+    .bannerm{
+        display: block;
+        place-items: center;
+    }
+    .banner{
+        display: none;
+    }
+}
