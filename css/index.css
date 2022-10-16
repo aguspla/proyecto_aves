@@ -58,9 +58,6 @@ body{
     font-family: 'Inconsolata', monospace;
     font-size: var(--text-sm);
     color: var(--primary);
-    /*display: grid;
-    grid-template-rows: auto 1fr auto;
-    min-height: 100vh;*/
 }
 
 li{
@@ -153,7 +150,7 @@ a:hover{
     font-size: var(--text-sm);
     margin: var(--sp-sm);
     padding: 3px;
-    transition: color 1.2s ease-in-out;
+    transition: color .4s ease-in-out;
 }
 .bannerm{
     display: none;
@@ -162,19 +159,60 @@ a:hover{
     display: grid;
     place-items: center;
 }
-.aves{
-    color: var(--accent);
-}
-.aves__izq{
-    background-color: var(--light);
 
-}
-.aves__drc{
-    background-color: var(--secondary);
+.aves p{
+    color: var(--accent);
+    font-size: var(--text-sm);
 }
 
 .aves__img{
     max-width: 360px;
+}
+
+.aves__izq{
+    padding: var(--sp-sm);
+    display: grid;
+    grid-template-areas: 
+    "imagen imagen texto texto texto"
+    "imagen imagen texto texto texto"
+    "imagen imagen reproductor reproductor reproductor";
+    grid-row-gap: var(--sp-sm);
+    grid-column-gap: var(--sp-sm);
+    justify-items: center;
+}
+
+.aves__izq .aves__img{
+    grid-area: imagen;
+}
+.aves__izq p{
+    grid-area: texto;
+}
+
+.aves__izq audio{
+    grid-area: reproductor;
+}
+
+.aves__drc{
+    padding: var(--sp-sm);
+    display: grid;
+    grid-template-areas: 
+    "texto texto texto imagen imagen"
+    "texto texto texto imagen imagen"
+    "reproductor reproductor reproductor imagen imagen";
+    grid-row-gap: var(--sp-sm);
+    grid-column-gap: var(--sp-sm);
+    justify-items: center;
+}
+
+.aves__drc .aves__img{
+    grid-area: imagen;
+}
+.aves__drc p{
+    grid-area: texto;
+}
+
+.aves__drc audio{
+    grid-area: reproductor;
 }
 
 .yo{
@@ -206,17 +244,17 @@ a:hover{
     align-items: center;
 }
 
-.cierre__imagen{
-    margin: var(--sp-xl);
+.cierre .cierre__imagen{
+    margin: var(--sp-xxl);
     max-width: 157px;
 }
 
-.cierre__cr{
+.cierre .cierre__cr{
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     font-size: var(--text-xs);
-    margin: var(--sp-xl);
+    margin: var(--sp-xxl);
 
 }
 
@@ -229,17 +267,39 @@ a:hover{
 
 .navegador__link a:hover{
     color: var(--primary);
+    animation-duration: 1.5s;
+    animation-name: navegador__links;
+    animation-iteration-count: 1;
 }
 
 /* Animations */
+@keyframes navegador__links{
+    0%{
+
+    }
+    70%{
+        transform: rotate(-53deg);
+    }
+    80%{
+        transform: rotate(20deg);
+    }
+    85%{transform: rotate(-20deg);
+    }
+    90%{
+        transform: rotate(12deg);
+    }
+    95%{
+        transform: rotate(-12deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
 
 
 /* Media Queries */
 
 @media screen and (max-width:826px) {
-   /* html{
-        font-size: 62.5;
-    }  esto es para cambiar en un futuro el size de las fuentes cuando pasa a mobile para los intros y el texto de nosotros.html hay que hacer matematicas y ahora no tengo ganas */
     hr{
         display: none;
     }
@@ -256,5 +316,76 @@ a:hover{
     }
     .banner{
         display: none;
+    }
+    .intro{
+        padding: var(--sp-lg) var(--sp-sm);
+        font-size: var(--text-sm);
+    }
+    .intro h1{
+        font-size: var(--text-sm);
+    }
+
+    .aves__izq {
+        padding: 0%;
+        padding-bottom: var(--sp-sm);
+        display: grid;
+        grid-template-areas: 
+        "imagen"
+        "texto "
+        "reproductor";
+        grid-row-gap: var(--sp-sm);
+        grid-column-gap: var(--sp-sm);
+        justify-items: center;
+    }
+    
+    .aves__izq .aves__img{
+        grid-area: imagen;
+    }
+    .aves__izq p{
+        grid-area: texto;
+        padding: var(--sp-xs);
+    }
+    
+    .aves__izq audio{
+        grid-area: reproductor;
+    }
+
+    .aves__drc {
+        padding: 0%;
+        padding-bottom: var(--sp-sm);
+        display: grid;
+        grid-template-areas: 
+        "imagen"
+        "texto "
+        "reproductor";
+        grid-row-gap: var(--sp-sm);
+        grid-column-gap: var(--sp-sm);
+        justify-items: center;
+    }
+    
+    .aves__drc .aves__img{
+        grid-area: imagen;
+    }
+    .aves__drc p{
+        grid-area: texto;
+        padding: var(--sp-xs);
+    }
+    
+    .aves__drc audio{
+        grid-area: reproductor;
+    }
+
+    .cierre{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .cierre .cierre__imagen{
+        margin: var(--sp-xxl) var(--sp-xs);
+    }
+    .cierre .cierre__cr{
+        margin: var(--sp-xxl) 0px;
+
     }
 }
