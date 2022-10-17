@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contacto</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
-    <header>    
+    <header class="container-fluid">    
         <nav class="navegador container">
             <a href="index.html"><img src="./img/logo.png" alt=""></a>
             <ul class="navegador__link">
@@ -22,26 +23,27 @@
     <img src="./img/mobile/banner.png" class="bannerm" alt="un ave blanca con una carta en el pico, una paloma">
     <img src="./img/banner.png" class="banner" alt="un ave blanca con una carta en el pico, una paloma">
     <main class="contacto background__secondary">
-            <article class="container">
-                <h3>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus a purus quis vehicula.
-                </h3>
-                <form action="" method="post">
-                <input type="text" name="Nombre" id="nombre" placeholder="Nombre">
-                <input type="text" name="Apellido" id="apellido" placeholder="Apellido">
-                <input type="email" name="email" id="email" placeholder="Correo Electronico">
-                <br>
-                <textarea name="Mensaje" id="mensaje" cols="70" rows="10" placeholder="Ingrese su mensaje..."></textarea>
-                <br>
-                <input type="checkbox" name="newletter" id="newletter">
-                <label for="newletter">Deseo recibir noticias</label>
-                <input type="reset" value="Reiniciar campos">
-                <input type="submit" value="Enviar">
-                </form>
-            </article>
-        </div>
+                <section class="row container">
+                    <h3 class="intro_contacto col-12">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam faucibus a purus quis vehicula.
+                    </h3>
+                </section>
+                <section class="container">
+                    <form action="" method="post" class="row g-2"> <!-- Por alguna razon no puedo separar los inputs sin que se mantengan uno al lado del otro, probe con margin en el index, dandoles un max width, los gutters solo se aplican arriba y abajo, la unica forma de hacerlo que se me ocurre es con grids propias -->
+                        <input type="text" name="Nombre" id="nombre"placeholder="Nombre" class="col-md-4 col-sm-12"> 
+                        <input type="text" name="Apellido" id="apellido" placeholder="Apellido" class="col-md-4 col-sm-12">
+                        <input type="email" name="email" id="email" placeholder="Correo Electronico" class="col-md-4 col-sm-12">
+                        <textarea name="Mensaje" id="mensaje" placeholder="Ingrese su mensaje..." class="col-12"></textarea>
+                        <article class="checkbox col-md-3 col-sm-12">
+                            <input type="checkbox" name="newletter" id="newletter">
+                            <label for="newletter">Deseo recibir noticias</label>
+                        </article>
+                        <input type="reset" value="Reiniciar campos" class="boton col-md-3 col-sm-12">
+                        <input type="submit" value="Enviar" class="boton col-md-3 col-sm-12">
+                    </form>
+                </section>
     </main>
-    <footer class="background__light">    
+    <footer class="background__light container-fluid">    
         <section class="cierre container">
             <img class="cierre__imagen" src="./img/colibri.png" alt="Ave pequeña de color verde y pico fino, un colibri">
             <hr>
@@ -50,5 +52,6 @@
             <caption>2022</caption></article>
         </section>    
     </footer>
+<script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
