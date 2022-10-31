@@ -1,0 +1,26 @@
+.intro{
+    color: var(--light);
+    background-color: var(--primary);
+    text-align: center;
+    padding-top: var(--sp-xxl);
+    padding-bottom: var(--sp-xxl);
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+
+}
+
+.background__light{
+    background-color: var(--light);
+}
+
+.background__primary{
+    background-color: var(--primary);
+}
+
+.background__secondary{
+    background-color: var(--secondary);
+}

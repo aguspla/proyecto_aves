@@ -1,0 +1,54 @@
+.aves p{
+    color: var(--accent);
+    font-size: var(--text-sm);
+}
+
+.aves__img{
+    max-width: 360px;
+}
+
+.aves__izq{
+    padding: var(--sp-sm);
+    display: grid;
+    grid-template-areas: 
+    "imagen imagen texto texto texto"
+    "imagen imagen texto texto texto"
+    "imagen imagen reproductor reproductor reproductor";
+    grid-row-gap: var(--sp-sm);
+    grid-column-gap: var(--sp-sm);
+    justify-items: center;
+}
+
+.aves__izq .aves__img{
+    grid-area: imagen;
+}
+.aves__izq p{
+    grid-area: texto;
+}
+
+.aves__izq audio{
+    grid-area: reproductor;
+}
+
+.aves__drc{
+    padding: var(--sp-sm);
+    display: grid;
+    grid-template-areas: 
+    "texto texto texto imagen imagen"
+    "texto texto texto imagen imagen"
+    "reproductor reproductor reproductor imagen imagen";
+    grid-row-gap: var(--sp-sm);
+    grid-column-gap: var(--sp-sm);
+    justify-items: center;
+}
+
+.aves__drc .aves__img{
+    grid-area: imagen;
+}
+.aves__drc p{
+    grid-area: texto;
+}
+
+.aves__drc audio{
+    grid-area: reproductor;
+}

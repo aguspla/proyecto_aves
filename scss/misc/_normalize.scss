@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+
+}
+
+h1{
+    font-size: var(--text-xxl);
+}
+
+h3{
+    font-size: var(--text-md);
+}
+
+label{
+    font-size: var(--text-sm);
+}
+
+body{
+    font-family: 'Inconsolata', monospace;
+    font-size: var(--text-sm);
+    color: var(--primary);
+}
+
+li{
+    display: inline;
+}
+
+header{
+    background-color: var(--accent);
+    padding-top: var(--sp-sm);
+    padding-bottom: var(--sp-sm);
+
+}
+main{
+    background-color: var(--primary);
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary);
+    
+
+}
+
+article {
+    font-size: var(--text-lg);
+    text-justify: auto;
+}
+
+img{
+    width: 100%;
+}
+
+input{
+    border: none;
+    background-color: var(--light);
+    color: var(--accent);
+    font-family: 'Inconsolata', monospace;
+    font-size: var(--text-lg);
+    margin-bottom: var(--sp-lg-hf);
+
+}
+::placeholder{
+    color: var(--accent);
+}
+
+textarea {
+    border: none;
+    background-color: var(--light);
+    color: var(--accent);
+    resize: none;
+    font-family: 'Inconsolata', monospace;
+    font-size: var(--text-lg);
+    padding: var(--sp-lg-hf);
+    height: 288px;
+}
+
+hr{
+    height: 4px;
+    width: 100%;
+    color: var(--primary);
+    background-color: var(--primary);
+    border: none;
+}
+
+
