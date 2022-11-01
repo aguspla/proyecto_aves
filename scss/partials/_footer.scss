@@ -1,21 +1,17 @@
 
 .cierre{
-    font-size: var(--text-xs);
-    display: flex;
-    flex-direction: column;
+    font-size: $text-xs;
+    @include flex(column, no-wrap, none, center, none);
     align-items: center;
-}
-
-.cierre .cierre__imagen{
-    margin: var(--sp-xxl);
-    max-width: 157px;
-}
-
-.cierre .cierre__cr{
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    font-size: var(--text-xs);
-    margin: var(--sp-xxl);
-
+    .cierre__imagen{
+        margin: $sp-xxl;
+        max-width: 157px;
+    }
+    .cierre__cr{
+        @include flex(column, no-wrap, flex-end, none, none);
+        font-size: $text-xs;
+        margin: $sp-xxl;
+    
+    }
+    
 }

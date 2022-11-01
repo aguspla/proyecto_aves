@@ -1,9 +1,9 @@
 .intro{
-    color: var(--light);
-    background-color: var(--primary);
+    color: $light;
+    background-color: $primary;
     text-align: center;
-    padding-top: var(--sp-xxl);
-    padding-bottom: var(--sp-xxl);
+    padding-top: $sp-xxl;
+    padding-bottom: $sp-xxl;
 }
 
 .container{
@@ -14,13 +14,13 @@
 }
 
 .background__light{
-    background-color: var(--light);
+    background-color: $light;
 }
 
 .background__primary{
-    background-color: var(--primary);
+    background-color: $primary;
 }
 
 .background__secondary{
-    background-color: var(--secondary);
+    background-color: $secondary;
 }

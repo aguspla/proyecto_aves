@@ -1,29 +1,32 @@
 
-.intro_contacto{
-    color: var(--accent);
-    font-family: 'Inconsolata' monospace;
-    font-size: var(--text-lg);
+.contacto{
+    color: $accent;
     text-align: center;
-    padding: var(--sp-lg) 0px;
-}
-
-.checkbox {
-    margin: var(--sp-lg-hf);
-}
-
-.boton{
-    border: none;
-    background-color: var(--accent);
-    color: var(--light);
-    width: min-content;
-    padding-left: 2px;
-    padding-right: 10px;
-    margin: var(--sp-lg-hf);
-}
-
-#newletter{
-    width: 16px;
-    height: 16px;
-    margin: 0px;
-    margin-left: var(--sp-lg-hf);
+    padding: $sp-lg 0px;
+    .formulario{
+        padding: $sp-lg;
+        #mensaje{
+            width: 100%;
+        }
+        .checkbox {
+            margin: $sp-lg-hf;
+        }
+        
+        .boton{
+            border: none;
+            background-color: $accent;
+            color: $light;
+            width: min-content;
+            padding-left: 2px;
+            padding-right: 10px;
+            margin: $sp-lg-hf;
+        }
+        
+        #newletter{
+            width: 16px;
+            height: 16px;
+            margin: 0px;
+            margin-left: $sp-lg-hf;
+        }
+    }
 }

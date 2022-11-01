@@ -1,10 +1,10 @@
 
 .yo{
-    padding:var(--sp-xxl) 0px;
-    color: var(--accent);
+    padding:$sp-xxl 0px;
+    color: $accent;
     text-align: center;
+    .yo__foto {
+        max-width: 293px;
+    }
 }
 
-.yo__foto {
-    max-width: 293px;
-}

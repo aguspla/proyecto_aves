@@ -1,41 +1,35 @@
 .navegador{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    @include flex(row, no-wrap, space-between, none, none);
     min-height: 94px;
+    .navegador__link{
+        @include flex(row, wrap, none, center, none);
+        a{
+            font-size: $text-md;
+            display: table-caption;
+            color: $light;
+            font-size: $text-sm;
+            margin: $sp-sm;
+            padding: 3px;
+            transition: color .4s ease-in-out;
+            &:hover{
+                color: $primary;
+                animation-duration: 1.5s;
+                animation-name: navegador__links;
+                animation-iteration-count: 1;
+            }
+        }
+    }
+    .navegador__logo{
+        width: 208px;
+    }
 }
 
-.navegador__link{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: center;
-}
-.navegador__logo{
-    width: 208px;
-}
-.navegador__link a{
-    font-size: var(--text-md);
-    display: table-caption;
-    color: var(--light);
-    font-size: var(--text-sm);
-    margin: var(--sp-sm);
-    padding: 3px;
-    transition: color .4s ease-in-out;
-}
 .bannerm{
     display: none;
 }
 .banner{
     display: grid;
     place-items: center;
-}
-
-.navegador__link a:hover{
-    color: var(--primary);
-    animation-duration: 1.5s;
-    animation-name: navegador__links;
-    animation-iteration-count: 1;
 }
 
 @keyframes navegador__links{

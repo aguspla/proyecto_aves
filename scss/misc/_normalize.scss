@@ -9,21 +9,26 @@ html{
 }
 
 h1{
-    font-size: var(--text-xxl);
+    font-size: $text-lg;
 }
 
 h3{
-    font-size: var(--text-md);
+    font-size: $text-md;
+}
+
+h4{
+    font-size: $text-sm;
+    color: $accent;
 }
 
 label{
-    font-size: var(--text-sm);
+    font-size: $text-sm;
 }
 
 body{
     font-family: 'Inconsolata', monospace;
-    font-size: var(--text-sm);
-    color: var(--primary);
+    font-size: $text-sm;
+    color: $primary;
 }
 
 li{
@@ -31,24 +36,24 @@ li{
 }
 
 header{
-    background-color: var(--accent);
-    padding-top: var(--sp-sm);
-    padding-bottom: var(--sp-sm);
+    background-color: $accent;
+    padding-top: $sp-sm;
+    padding-bottom: $sp-sm;
 
 }
 main{
-    background-color: var(--primary);
+    background-color: $primary;
 }
 
 a{
     text-decoration: none;
-    color: var(--primary);
+    color: $primary;
     
 
 }
 
 article {
-    font-size: var(--text-lg);
+    font-size: $text-lg;
     text-justify: auto;
 }
 
@@ -58,34 +63,32 @@ img{
 
 input{
     border: none;
-    background-color: var(--light);
-    color: var(--accent);
+    background-color: $light;
+    color: $accent;
     font-family: 'Inconsolata', monospace;
-    font-size: var(--text-lg);
-    margin-bottom: var(--sp-lg-hf);
+    font-size: $text-lg;
+    margin-bottom: $sp-lg-hf;
 
 }
 ::placeholder{
-    color: var(--accent);
+    color: $accent;
 }
 
 textarea {
     border: none;
-    background-color: var(--light);
-    color: var(--accent);
+    background-color: $light;
+    color: $accent;
     resize: none;
     font-family: 'Inconsolata', monospace;
-    font-size: var(--text-lg);
-    padding: var(--sp-lg-hf);
+    font-size: $text-lg;
+    padding: $sp-lg-hf;
     height: 288px;
 }
 
 hr{
     height: 4px;
     width: 100%;
-    color: var(--primary);
-    background-color: var(--primary);
+    color: $primary;
+    background-color: $primary;
     border: none;
 }
-
-
