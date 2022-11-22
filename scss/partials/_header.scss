@@ -7,7 +7,7 @@
             font-size: $text-md;
             display: table-caption;
             color: $light;
-            font-size: $text-sm;
+            font-size: $text-md;
             margin: $sp-sm;
             padding: 3px;
             transition: color .4s ease-in-out;
@@ -30,6 +30,17 @@
 .banner{
     display: grid;
     place-items: center;
+}
+
+.intro{
+    color: $light;
+    background-color: $primary;
+    text-align: center;
+    padding-top: $sp-xxl;
+    padding-bottom: $sp-xxl;
+    &__title{
+        padding-bottom: $sp-md;
+    }
 }
 
 @keyframes navegador__links{

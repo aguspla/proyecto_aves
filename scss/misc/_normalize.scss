@@ -9,6 +9,10 @@ html{
 }
 
 h1{
+    font-size: $text-xl;
+}
+
+h2{
     font-size: $text-lg;
 }
 
@@ -18,7 +22,6 @@ h3{
 
 h4{
     font-size: $text-sm;
-    color: $accent;
 }
 
 label{

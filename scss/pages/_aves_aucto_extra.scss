@@ -1,9 +1,9 @@
 .aves{
     text-align: center;
-    .aves__img{
+    &__img{
         max-width: 360px;
     }
-    .aves__izq{
+    &__izq{
         padding: $sp-sm;
         display: grid;
         grid-template-areas: 
@@ -14,7 +14,7 @@
         grid-column-gap: $sp-sm;
         justify-items: center;
     }
-    .aves__drc{
+    &__drc{
         padding: $sp-sm;
         display: grid;
         grid-template-areas: 
@@ -25,11 +25,19 @@
         grid-column-gap: $sp-sm;
         justify-items: center;
     }
-    .aves__img{
+    &__img{
         grid-area: imagen;
     }
      audio{
         grid-area: reproductor;
+    }
+    &__articles{
+        color: $accent;
+        margin: $sp-xl;
+        margin-bottom: $sp-lg;
+        h3{
+            margin-bottom: $sp-sm;
+        }
     }
 
 } 

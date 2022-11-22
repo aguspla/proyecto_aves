@@ -10,14 +10,16 @@ html {
   font-size: 62.5%; }
 
 h1 {
+  font-size: 3.6rem; }
+
+h2 {
   font-size: 3.2rem; }
 
 h3 {
   font-size: 2rem; }
 
 h4 {
-  font-size: 1.6rem;
-  color: #426B69; }
+  font-size: 1.6rem; }
 
 label {
   font-size: 1.6rem; }
@@ -119,7 +121,7 @@ hr {
       font-size: 2rem;
       display: table-caption;
       color: #F2FBE0;
-      font-size: 1.6rem;
+      font-size: 2rem;
       margin: 1.6rem;
       padding: 3px;
       transition: color .4s ease-in-out; }
@@ -138,6 +140,15 @@ hr {
   display: grid;
   place-items: center; }
 
+.intro {
+  color: #F2FBE0;
+  background-color: #ACC18A;
+  text-align: center;
+  padding-top: 12rem;
+  padding-bottom: 12rem; }
+  .intro__title {
+    padding-bottom: 3.2rem; }
+
 @keyframes navegador__links {
   0% { }
   70% {
@@ -154,13 +165,6 @@ hr {
     transform: rotate(0deg); } }
 
 /* PAGES */
-.intro {
-  color: #F2FBE0;
-  background-color: #ACC18A;
-  text-align: center;
-  padding-top: 12rem;
-  padding-bottom: 12rem; }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -177,33 +181,40 @@ hr {
 
 .aves {
   text-align: center; }
-  .aves .aves__img {
+  .aves__img {
     max-width: 360px; }
-  .aves .aves__izq {
+  .aves__izq {
     padding: 1.6rem;
     display: grid;
     grid-template-areas: "imagen imagen texto texto texto" "imagen imagen texto texto texto" "imagen imagen reproductor reproductor reproductor";
     grid-row-gap: 1.6rem;
     grid-column-gap: 1.6rem;
     justify-items: center; }
-  .aves .aves__drc {
+  .aves__drc {
     padding: 1.6rem;
     display: grid;
     grid-template-areas: "texto texto texto imagen imagen" "texto texto texto imagen imagen" "reproductor reproductor reproductor imagen imagen";
     grid-row-gap: 1.6rem;
     grid-column-gap: 1.6rem;
     justify-items: center; }
-  .aves .aves__img {
+  .aves__img {
     grid-area: imagen; }
   .aves audio {
     grid-area: reproductor; }
+  .aves__articles {
+    color: #426B69;
+    margin: 8rem;
+    margin-bottom: 5rem; }
+    .aves__articles h3 {
+      margin-bottom: 1.6rem; }
 
 .yo {
   padding: 12rem 0px;
   color: #426B69;
   text-align: center; }
-  .yo .yo__foto {
-    max-width: 293px; }
+  .yo__foto {
+    max-width: 293px;
+    margin-bottom: 8rem; }
 
 .contacto {
   color: #426B69;

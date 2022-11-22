@@ -3,8 +3,9 @@
     padding:$sp-xxl 0px;
     color: $accent;
     text-align: center;
-    .yo__foto {
+    &__foto {
         max-width: 293px;
+        margin-bottom: $sp-xl;
     }
 }
 
