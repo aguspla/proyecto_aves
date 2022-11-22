@@ -130,8 +130,6 @@ hr {
         animation-duration: 1.5s;
         animation-name: navegador__links;
         animation-iteration-count: 1; }
-  .navegador .navegador__logo {
-    width: 208px; }
 
 .bannerm {
   display: none; }
